@@ -7,7 +7,7 @@ if not api_key:
 
 client = openai.OpenAI(api_key=api_key)
 
-with open("training_data.jsonl", "rb") as f:
+with open("dataset.jsonl", "rb") as f:
     file = client.files.create(
         file=f,
         purpose="fine-tune"
